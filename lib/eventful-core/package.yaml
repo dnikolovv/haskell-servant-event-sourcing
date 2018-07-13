@@ -1,0 +1,46 @@
+name: eventful-core
+version: "0.2.0"
+maintainer: David Reaver
+synopsis: Core module for eventful
+description: Core module for eventful
+maintainer: David Reaver
+stability: experimental
+category: Database,Eventsourcing
+license: MIT
+license-file: LICENSE.md
+
+github: jdreaver/eventful
+
+extra-source-files:
+  - CHANGELOG.md
+  - README.md
+
+dependencies:
+  - base >= 4.9 && < 5
+
+  - aeson
+  - containers
+  - contravariant
+  - http-api-data
+  - path-pieces
+  - sum-type-boilerplate
+  - template-haskell
+  - text
+  - transformers
+  - uuid
+
+library:
+  source-dirs:
+    - src
+  ghc-options: -Wall
+
+tests:
+  spec:
+    main: Spec.hs
+    ghc-options: -Wall
+    source-dirs:
+      - tests
+      - src
+    dependencies:
+      - hspec
+      - HUnit

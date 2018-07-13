@@ -1,0 +1,101 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 04e9049f860420c06ec6ad2c46c59a276b24e760e4b3e0ef56ca16455dc0b83e
+
+name:           eventful-core
+version:        0.2.0
+synopsis:       Core module for eventful
+description:    Core module for eventful
+category:       Database,Eventsourcing
+stability:      experimental
+homepage:       https://github.com/jdreaver/eventful#readme
+bug-reports:    https://github.com/jdreaver/eventful/issues
+maintainer:     David Reaver
+license:        MIT
+license-file:   LICENSE.md
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/jdreaver/eventful
+
+library
+  exposed-modules:
+      Eventful
+      Eventful.CommandHandler
+      Eventful.EventBus
+      Eventful.ProcessManager
+      Eventful.Projection
+      Eventful.ProjectionCache.Types
+      Eventful.ReadModel.Class
+      Eventful.Serializer
+      Eventful.Store.Class
+      Eventful.Store.Queries
+      Eventful.TH
+      Eventful.TH.Projection
+      Eventful.TH.SumTypeSerializer
+      Eventful.UUID
+  other-modules:
+      Paths_eventful_core
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , base >=4.9 && <5
+    , containers
+    , contravariant
+    , http-api-data
+    , path-pieces
+    , sum-type-boilerplate
+    , template-haskell
+    , text
+    , transformers
+    , uuid
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Eventful.SerializerSpec
+      Eventful
+      Eventful.CommandHandler
+      Eventful.EventBus
+      Eventful.ProcessManager
+      Eventful.Projection
+      Eventful.ProjectionCache.Types
+      Eventful.ReadModel.Class
+      Eventful.Serializer
+      Eventful.Store.Class
+      Eventful.Store.Queries
+      Eventful.TH
+      Eventful.TH.Projection
+      Eventful.TH.SumTypeSerializer
+      Eventful.UUID
+      Paths_eventful_core
+  hs-source-dirs:
+      tests
+      src
+  ghc-options: -Wall
+  build-depends:
+      HUnit
+    , aeson
+    , base >=4.9 && <5
+    , containers
+    , contravariant
+    , hspec
+    , http-api-data
+    , path-pieces
+    , sum-type-boilerplate
+    , template-haskell
+    , text
+    , transformers
+    , uuid
+  default-language: Haskell2010
