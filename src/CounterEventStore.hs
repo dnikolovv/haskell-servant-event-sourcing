@@ -42,9 +42,7 @@ writeEvent event writer reader = do
                                  storeResult <- atomically $ storeEvents writer nil AnyPosition [event]
                                  case storeResult of
                                    Left _ -> return $ Left $ EventStoreError $ "An error occurred while saving the event '" ++ show event ++ "'."
-                                   Right _ -> do
-                                              counter <- latestCounter reader
-                                              return $ Right $ counter
+                                   Right _ -> Right <$> latestCounter reader
 
 counterProjection :: CounterProjection
 counterProjection = Projection {
