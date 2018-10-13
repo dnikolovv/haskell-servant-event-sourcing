@@ -6,11 +6,6 @@ cache:
   directories:
     - ~/.stack
 
-addons:
-  apt:
-    packages:
-      - libgmp-dev
-
 before_install:
   # Download and unpack the stack executable
   - mkdir -p ~/.local/bin
