@@ -1,4 +1,4 @@
-# Haskell Servant with Event-Sourcing
+# Haskell Servant with Event-Sourcing [![Build Status](https://travis-ci.com/dnikolovv/haskell-servant-event-sourcing.svg?branch=master)](https://travis-ci.com/dnikolovv/haskell-servant-event-sourcing)
 
 A very simple but interesing application made using Haskell [Servant](http://hackage.haskell.org/package/servant) and [Eventful](https://github.com/jdreaver/eventful).
 
